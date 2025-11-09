@@ -86,6 +86,7 @@ document.querySelectorAll('.ripple-effect').forEach(button => {
 
 // card tilt effect
 // only apply card tilt effect on desktop (non-touch devices)
+const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
 if (!isMobile) {
     const interactiveCards = document.querySelectorAll('.interactive-card');
 
