@@ -193,6 +193,16 @@ html {
 .footer-section h3.studio-name {
     font-size: 0.875rem;
     line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image-footer {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .footer-section h4 {

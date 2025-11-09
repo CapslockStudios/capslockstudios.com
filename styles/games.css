@@ -217,6 +217,11 @@
     .game {
         padding: 30px 20px;
     }
+    
+    .game-image-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     .game-details h3 {
         font-size: 2rem;
@@ -258,6 +263,11 @@
 
     .game {
         padding: 20px 20px;
+    }
+    
+    .game-image-container {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .game-details h3 {

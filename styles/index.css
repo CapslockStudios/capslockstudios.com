@@ -222,12 +222,11 @@ h2.section-title.pixelated-title {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
+    /* animation removed */
+    opacity: 1;
 }
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -236,7 +235,7 @@ h2.section-title.pixelated-title {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
 .hero-btn {
     display: inline-flex;
