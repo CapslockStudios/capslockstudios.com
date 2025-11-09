@@ -1027,6 +1027,7 @@ h2.section-title.pixelated-title {
         order: 1;
         max-width: 100%;
         margin-bottom: 15px;
+        padding-top: 30px;
     }
     
     .hero-subtitle {
