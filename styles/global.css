@@ -27,10 +27,10 @@ html {
     --text-muted: #666666;
     
     /* typography */
-    --h1-font-size: 3rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1rem;
-    --p-font-size: 0.625rem;
+    --h1-font-size: clamp(2rem, 5vw, 3rem);
+    --h2-font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    --h3-font-size: clamp(0.9rem, 2vw, 1rem);
+    --p-font-size: clamp(0.875rem, 1.5vw, 1rem);
     --line-height: 1.8;
     
     /* misc */
@@ -133,7 +133,7 @@ hr {
 .container {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 120px 60px 80px;
+    padding: 60px 60px 80px;
 }
 
 /* scrollbar styling - hidden */
@@ -185,7 +185,7 @@ html {
 
 .footer-section h3 {
     color: var(--text-primary);
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     margin-bottom: 24px;
     font-weight: 500;
 }
@@ -197,7 +197,7 @@ html {
 
 .footer-section h4 {
     color: var(--text-primary);
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     margin-bottom: 24px;
     font-weight: 500;
     text-transform: uppercase;
@@ -206,7 +206,7 @@ html {
 
 .footer-section p {
     color: var(--text-secondary);
-    font-size: 1.0625rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.0625rem);
     line-height: 1.8;
 }
 
@@ -218,7 +218,7 @@ html {
     margin-bottom: 14px;
     transition: var(--transition);
     font-weight: 400;
-    font-size: 1.0625rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.0625rem);
 }
 
 .footer-section a:hover {
@@ -259,7 +259,7 @@ html {
 
 .footer-bottom p {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .footer-bottom .studio-name {
@@ -273,20 +273,13 @@ html {
 
 @media (max-width: 1024px) {
     .container {
-        padding: 150px 40px 80px;
+        padding: 80px 40px 80px;
     }
 }
 
 @media (max-width: 768px) {
-    :root {
-        --h1-font-size: 2.5rem;
-        --h2-font-size: 1.25rem;
-        --h3-font-size: 1.25rem;
-        --p-font-size: 1rem;
-    }
-    
     .container {
-        padding: 100px 20px 40px;
+        padding: 60px 20px 40px;
     }
     
     .section {

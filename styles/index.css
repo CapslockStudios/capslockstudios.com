@@ -140,7 +140,7 @@
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 300;
     margin-bottom: 20px;
     line-height: 1.1;
@@ -183,7 +183,7 @@
 
 /* smaller size for section titles */
 h2.section-title.pixelated-title {
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     line-height: 1.5;
 }
 
@@ -200,7 +200,7 @@ h2.section-title.pixelated-title {
 }
 
 .hero-subtitle {
-    font-size: 1.35rem;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
     color: var(--text-secondary);
     margin-bottom: 25px;
     line-height: 1.6;
@@ -243,7 +243,7 @@ h2.section-title.pixelated-title {
     align-items: center;
     gap: 8px;
     padding: 14px 24px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     font-weight: 500;
     text-decoration: none;
     border: 1px solid var(--accent-primary);
@@ -462,7 +462,7 @@ h2.section-title.pixelated-title {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     color: var(--text-primary);
     line-height: 1;
@@ -470,7 +470,7 @@ h2.section-title.pixelated-title {
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -539,7 +539,7 @@ h2.section-title.pixelated-title {
     border: 2px solid white;
     color: white;
     padding: 20px 40px;
-    font-size: 1.125rem;
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -572,7 +572,7 @@ h2.section-title.pixelated-title {
     padding: 8px 16px;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
     color: var(--text-secondary);
     transition: all 0.3s ease;
     outline: none;
@@ -630,14 +630,14 @@ h2.section-title.pixelated-title {
 }
 
 .feature-card h3 {
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
     margin-bottom: 15px;
     font-weight: 400;
     color: var(--text-primary);
 }
 
 .feature-card p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -658,7 +658,7 @@ h2.section-title.pixelated-title {
 .profile p {
     max-width: 800px;
     margin: 0 auto 40px;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-secondary);
     line-height: 1.8;
 }
@@ -802,7 +802,7 @@ h2.section-title.pixelated-title {
 .cta-section h2 {
     position: relative;
     z-index: 1;
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 20px;
 }
 
@@ -811,7 +811,7 @@ h2.section-title.pixelated-title {
     z-index: 1;
     max-width: 600px;
     margin: 0 auto 40px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--text-secondary);
 }
 
@@ -829,7 +829,7 @@ h2.section-title.pixelated-title {
     align-items: center;
     justify-content: center;
     padding: 16px 40px;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1009,34 +1009,49 @@ h2.section-title.pixelated-title {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 40px 60px;
+        padding: 120px 40px 60px;
+        gap: 30px;
     }
     
     .hero-content {
         max-width: 100%;
-        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .hero-title-banner {
-        margin: 0 auto 30px auto;
+        max-width: 600px;
+        margin: 0 auto 25px auto;
+    }
+    
+    .hero-subtitle {
+        margin-bottom: 20px;
+    }
+    
+    .hero-subtitle:first-of-type {
+        margin-bottom: 30px;
     }
     
     .hero-image {
         max-width: 700px;
-        order: 2;
+        width: 100%;
+        margin: 20px auto 0 auto;
     }
     
     .hero-buttons {
         justify-content: center;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 90px 20px 30px;
+        padding: 100px 20px 40px;
         min-height: auto;
         flex-direction: column;
         display: flex;
+        gap: 20px;
     }
     
     .hero-content {
@@ -1044,55 +1059,53 @@ h2.section-title.pixelated-title {
     }
     
     .hero-title {
-        font-size: 2.5rem;
         order: 2;
     }
     
     .hero-title.pixelated-title {
-        font-size: 2rem;
         line-height: 1.6;
         margin-bottom: 0px;
     }
     
     .hero-title-banner {
-        max-width: 90%;
+        max-width: 95%;
         margin: 0 auto 20px auto;
-        order: 2;
+        order: 1;
         filter: drop-shadow(0 0 15px rgba(255, 200, 100, 0.3)) 
                 drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
     }
     
-    .hero-image {
-        order: 1;
-        max-width: 100%;
-        margin-bottom: 15px;
-        padding-top: 40px;
-    }
-    
     .hero-subtitle {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        order: 3;
+        line-height: 1.6;
+        order: 2;
         margin-top: 0;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
     }
     
     .hero-subtitle:first-of-type {
-        margin-bottom: 8px;
+        margin-bottom: 20px;
     }
     
     .hero-buttons {
         flex-direction: row;
-        flex-wrap: nowrap;
-        order: 4;
-        margin-top: 15px;
+        flex-wrap: wrap;
+        order: 3;
+        margin-top: 10px;
+        margin-bottom: 25px;
         gap: 10px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-image {
+        order: 4;
+        max-width: 100%;
+        margin: 0 auto;
     }
     
     h2.section-title.pixelated-title {
-        font-size: 1.25rem;
         line-height: 1.6;
     }
     
@@ -1100,12 +1113,8 @@ h2.section-title.pixelated-title {
         flex-shrink: 0;
         white-space: nowrap;
         justify-content: center;
-        font-size: 0.8rem;
-        padding: 12px 18px;
-    }
-    
-    .hero-image {
-        max-width: 100%;
+        padding: 12px 20px;
+        text-align: center;
     }
     
     /* carousel mobile adjustments */
@@ -1123,9 +1132,6 @@ h2.section-title.pixelated-title {
         right: 10px;
     }
     
-    .carousel-btn i {
-        font-size: 1rem;
-    }
     
     .carousel-indicators {
         bottom: 10px;
@@ -1145,9 +1151,6 @@ h2.section-title.pixelated-title {
         justify-content: center;
     }
     
-    .stat-number {
-        font-size: 2.5rem;
-    }
     
     .features-grid {
         grid-template-columns: 1fr;
@@ -1163,9 +1166,6 @@ h2.section-title.pixelated-title {
         height: 150px;
     }
     
-    .profile p {
-        font-size: 1.1rem;
-    }
     
     .profile .icons a {
         width: 50px;
@@ -1181,13 +1181,6 @@ h2.section-title.pixelated-title {
         padding: 60px 30px;
     }
     
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-    
-    .cta-section p {
-        font-size: 1.1rem;
-    }
     
     .cta-buttons {
         flex-direction: column;
@@ -1204,7 +1197,6 @@ h2.section-title.pixelated-title {
         left: 20px;
         width: 45px;
         height: 45px;
-        font-size: 1rem;
     }
     
     .scroll-to-top {
@@ -1212,7 +1204,6 @@ h2.section-title.pixelated-title {
         right: 20px;
         width: 45px;
         height: 45px;
-        font-size: 1.1rem;
     }
     
     .modal-content {
@@ -1221,7 +1212,6 @@ h2.section-title.pixelated-title {
     
     .modal-close {
         top: -40px;
-        font-size: 2.5rem;
     }
 }
 
