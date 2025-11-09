@@ -1,0 +1,307 @@
+*, html {
+    scroll-behavior: smooth !important;
+    box-sizing: border-box;
+}
+
+:root {
+    /* dark mode palette */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --bg-card: #1a1a1a;
+    --bg-hover: #1f1f1f;
+    
+    /* monochrome accent */
+    --accent-primary: #ffffff;
+    --accent-secondary: #a0a0a0;
+    --border-color: #2a2a2a;
+    
+    /* text colors */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --text-muted: #666666;
+    
+    /* typography */
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
+    --p-font-size: 1.125rem;
+    --line-height: 1.8;
+    
+    /* misc */
+    --border-radius: 0;
+    --transition: all 0.2s ease;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    
+    /* layout */
+    --max-content-width: 1400px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+}
+
+/* pixelated font for specific elements */
+.logo,
+.hero-btn,
+.game-link,
+.studio-name {
+    font-family: "Press Start 2P", cursive;
+}
+
+* {
+    cursor: none;
+}
+
+.section {
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: 400;
+}
+
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-primary);
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+p, .about p {
+    font-size: var(--p-font-size);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 60px 0;
+}
+
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 120px 60px 80px;
+}
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
+
+/* selection styling */
+::selection {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+::-moz-selection {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* focus states */
+*:focus {
+    outline: 1px solid var(--text-primary);
+    outline-offset: 2px;
+}
+
+/* footer */
+.footer {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    padding: 100px 40px 50px;
+    margin-top: 150px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 70px;
+    margin-bottom: 70px;
+}
+
+.footer-section h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.footer-section h3.studio-name {
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer-section h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: none;
+    margin-bottom: 14px;
+    transition: var(--transition);
+    font-weight: 400;
+    font-size: 1.0625rem;
+}
+
+.footer-section a:hover {
+    color: var(--text-primary);
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    margin: 0;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    opacity: 1;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 50px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.footer-bottom .studio-name {
+    font-size: 0.6875rem;
+    color: var(--text-primary);
+}
+
+.footer-bottom .heart {
+    color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 150px 40px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --p-font-size: 1rem;
+    }
+    
+    .container {
+        padding: 120px 25px 60px;
+    }
+    
+    .section {
+        margin-bottom: 80px;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    .footer {
+        padding: 60px 25px 30px;
+        margin-top: 100px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

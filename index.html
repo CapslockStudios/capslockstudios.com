@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- todo: add google analytics -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover our latest game: an immersive gaming experience by Capslock Studios.">
+    <meta name="keywords" content="game, fun, fun game, indie game, video game, gaming, Capslock Studios">
+    <meta name="author" content="Capslock Studios">
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/games.css">
+    <link rel="stylesheet" href="styles/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <title>Capslock Studios</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CAPSLOCK STUDIOS</div>
+    </nav>
+
+    <!-- background music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/MyLightAndSpirit/music/Intro Music.wav" type="audio/wav">
+        Your browser does not support audio.
+    </audio>
+
+    <!-- music control button -->
+    <button id="musicToggle" class="music-toggle muted" aria-label="Toggle background music">
+        <i class="fas fa-volume-mute"></i>
+    </button>
+
+    <!-- animated gradient background -->
+    <div class="gradient-bg">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+        <div class="gradient-blob blob-4"></div>
+    </div>
+
+    <!-- custom cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- main title section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title pixelated-title">
+                My Light and Spirit
+            </h1>
+            <p class="hero-subtitle fade-in-up"><i>Hidden away in the ruins of Yaagen lies the souls of the damned. You've arrived with a purpose--to save your beloved and illuminate what once was.</i></p>
+            
+            <p class="hero-subtitle fade-in-up">My Light and Spirit is an award-winning puzzle game with a <b>unique light mechanic</b> to interact with the world.</p>
+            <div class="hero-buttons fade-in-up">
+                <a href="#" class="hero-btn primary ripple-effect"><i class="fas fa-download"></i> Download Now</a>
+                <a href="#games" class="hero-btn secondary ripple-effect trailer-btn"><i class="fas fa-play"></i> Watch Trailer</a>
+            </div>
+        </div>
+        <div class="hero-image parallax-element" data-speed="0.2">
+            <div class="image-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/thumbnail.PNG" alt="Game Thumbnail">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene1.png" alt="Game Scene 1">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene2.png" alt="Game Scene 2">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene3.png" alt="Game Scene 3">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene4.png" alt="Game Scene 4">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene5.png" alt="Game Scene 5">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene6.png" alt="Game Scene 6">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/Scene8.png" alt="Game Scene 8">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/section 3 - panel 1.png" alt="Game Panel 3">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-wrapper tilt-effect">
+                            <img src="assets/MyLightAndSpirit/Title/section 5 - panel 1.PNG" alt="Game Panel 5">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- carousel navigation -->
+                <button class="carousel-btn carousel-prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- carousel indicators -->
+                <div class="carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"> 
+
+
+        <!-- game showcase -->
+        <div class="section">
+            <div class="games" id="games">
+                <h2 class="section-title pixelated-title">About the Game</h2>
+                <div class="game-grid">
+                    <div class="game featured">
+                        <div class="game-image-container">
+                            <img src="assets/MyLightAndSpirit/Title/thumbnail.PNG" class="game-image" alt="My Light and Spirit" id="game1">
+                            <div class="image-hover-overlay">
+                                <button class="play-overlay-btn" data-video-id="trailer1">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Trailer</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-details">
+                            <h3 class="pixelated-title">My Light and Spirit</h3>
+                            <p class="first-paragraph"><b>My Light and Spirit</b> is a grid-based puzzle game where you use light to shape the world around you. Guide beams across intricate grids to make shadow blocks vanish, reflect light off mirrors, uncover new paths, and much more.
+                            </p>
+                            <p>With over 100 handcrafted levels, <b>My Light and Spirit</b> challenges players to think creatively and master the interplay between light and shadow.
+                            <div class="tags">
+                                <span class="tag">Puzzle</span>
+                                <span class="tag">Story Rich</span>
+                                <span class="tag">Single Player</span>
+                            </div>
+                            <div class="game-links">
+                                <a href="#" class="game-link source-link ripple-effect"><i class="fab fa-steam"></i> Steam</a>
+                                <a href="#" class="game-link source-link ripple-effect"><i class="fas fa-download"></i> Download</a>
+                                <a href="#" class="game-link source-link ripple-effect trailer-btn"><i class="fas fa-play"></i> Watch Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- team section -->
+        <div class="section">
+            <div class="team" id="team">
+                <h2 class="section-title pixelated-title">Meet the Team</h2>
+                <div class="team-grid">
+                    <div class="team-member interactive-card">
+                        <h3>Dorsa Rohani</h3>
+                        <p class="team-role">Programmer / Musician / Writer</p>
+                        <p class="team-description">add here</p>
+                        <div class="team-social">
+                            <a href="https://dorsarohani.com/" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>Evan Ma</h3>
+                        <p class="team-role">Programmer / Writer</p>
+                        <p class="team-description">4+ years of game development experience, focusing on gameplay mechanics, with an award-winning background in competitive robotics</p>
+                        <div class="team-social">
+                            <a href="https://itch.io/profile/revan-879" target="_blank" title="itch.io"><i class="fas fa-gamepad"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>Richard Zhang</h3>
+                        <p class="team-role">Programmer / Artist / Designer</p>
+                        <p class="team-description">5+ years of game development experience with a sharp eye for immersive design and player experiences</p>
+                        <div class="team-social">
+                            <a href="https://richardzhang.net/" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>Haley Tran</h3>
+                        <p class="team-role">Lead Artist</p>
+                        <p class="team-description">defines the visual identity and artistic direction that brings our creative vision to life. currently @ Sheridan Animation</p>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/venix.mp4/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>David Guo</h3>
+                        <p class="team-role">Designer / Lead Operations</p>
+                        <p class="team-description"> add here</p>
+                        <div class="team-social">
+                            <a href="https://github.com/SoulEmp" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>martendo</h3>
+                        <p class="team-role">Programmer</p>
+                        <p class="team-description">add here</p>
+                        <div class="team-social">
+                            <a href="https://github.com/martendo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>Jimmy Zhu</h3>
+                        <p class="team-role">Programmer</p>
+                        <p class="team-description">builds and optimizes core gameplay architecture, backed by 6 years of award-winning competitive programming experience</p>
+                        <div class="team-social">
+                            <a href="#" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member interactive-card">
+                        <h3>Dylan Wang</h3>
+                        <p class="team-role">Programmer</p>
+                        <p class="team-description">focuses on systems design, creative visuals and UI/UX with a background in crafting fun and unique mini-games</p>
+                        <div class="team-social">
+                            <a href="#" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="studio-name">CAPSLOCK STUDIOS</h3>
+                <p>hi add slogan herehi add slogan herehi add slogan here</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="#hero">latest release</a>
+                <a href="#games">games</a>
+                <a href="#team">team</a>
+                <a href="mailto:hello@capslockstudios.com">contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Social</h4>
+                <div class="footer-social">
+                    <a href="#" title="Steam"><i class="fab fa-steam"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Capslock Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- scroll to top button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- video modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/year.js"></script>
+    <script src="scripts/effects.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/carousel.js"></script>
+
+</body>
+</html>
