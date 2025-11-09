@@ -59,6 +59,7 @@
 .game-image-container {
     position: relative;
     overflow: hidden;
+    margin-left: 60px;
 }
 
 .game .game-image {
