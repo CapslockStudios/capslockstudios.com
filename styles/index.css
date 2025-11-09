@@ -124,10 +124,10 @@
 .hero {
     min-height: 80vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 50px;
-    padding: 140px 60px 60px;
+    padding: 160px 60px 60px;
     max-width: var(--max-content-width);
     margin: 0 auto;
     position: relative;
@@ -145,6 +145,33 @@
     margin-bottom: 20px;
     line-height: 1.1;
     color: var(--text-primary);
+}
+
+.hero-title-banner {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(255, 200, 100, 0.3)) 
+            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+    -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 8%, 
+        black 92%, 
+        transparent 100%);
+    mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 8%, 
+        black 92%, 
+        transparent 100%);
+}
+
+.hero-title-banner:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 30px rgba(255, 200, 100, 0.5)) 
+            drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
 }
 
 .pixelated-title {
@@ -990,6 +1017,10 @@ h2.section-title.pixelated-title {
         order: 1;
     }
     
+    .hero-title-banner {
+        margin: 0 auto 30px auto;
+    }
+    
     .hero-image {
         max-width: 700px;
         order: 2;
@@ -1002,7 +1033,7 @@ h2.section-title.pixelated-title {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 80px 20px 30px;
+        padding: 90px 20px 30px;
         min-height: auto;
         flex-direction: column;
         display: flex;
@@ -1023,11 +1054,19 @@ h2.section-title.pixelated-title {
         margin-bottom: 0px;
     }
     
+    .hero-title-banner {
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+        order: 2;
+        filter: drop-shadow(0 0 15px rgba(255, 200, 100, 0.3)) 
+                drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+    
     .hero-image {
         order: 1;
         max-width: 100%;
         margin-bottom: 15px;
-        padding-top: 30px;
+        padding-top: 40px;
     }
     
     .hero-subtitle {
