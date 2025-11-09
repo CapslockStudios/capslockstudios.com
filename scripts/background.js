@@ -36,33 +36,33 @@ document.querySelectorAll('a, button, .interactive-card').forEach(el => {
     });
 });
 
-// 3d tilt effect
+// 3d tilt effect 
 // only apply tilt effect on desktop (non touch devices and wider screens)
-const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+// const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
 
-if (!isMobile) {
-    const tiltElements = document.querySelectorAll('.tilt-effect');
+// if (!isMobile) {
+//     const tiltElements = document.querySelectorAll('.tilt-effect');
 
-    tiltElements.forEach(el => {
-        el.addEventListener('mousemove', (e) => {
-            const rect = el.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+//     tiltElements.forEach(el => {
+//         el.addEventListener('mousemove', (e) => {
+//             const rect = el.getBoundingClientRect();
+//             const x = e.clientX - rect.left;
+//             const y = e.clientY - rect.top;
             
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
+//             const centerX = rect.width / 2;
+//             const centerY = rect.height / 2;
             
-            const rotateX = (centerY - y) / 20;
-            const rotateY = (x - centerX) / 20;
+//             const rotateX = (centerY - y) / 20;
+//             const rotateY = (x - centerX) / 20;
             
-            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-        });
+//             el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+//         });
         
-        el.addEventListener('mouseleave', () => {
-            el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-        });
-    });
-}
+//         el.addEventListener('mouseleave', () => {
+//             el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+//         });
+//     });
+// }
 
 // ripple effect
 document.querySelectorAll('.ripple-effect').forEach(button => {
