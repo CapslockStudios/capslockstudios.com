@@ -4,8 +4,8 @@
 
 .games h2 {
     text-align: left;
-    margin-bottom: 80px;
-    font-size: 6rem;
+    margin-bottom: 50px;
+    font-size: 3.5rem;
     font-weight: 200;
     letter-spacing: -0.04em;
     line-height: 0.9;
@@ -24,8 +24,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
-    padding: 120px 0;
+    padding: 60px 0;
     border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     transition: var(--transition);
 }
 
@@ -181,7 +183,7 @@
     .game {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 80px 0;
+        padding: 40px 30px;
     }
     
     .game:nth-child(even) .game-image {
@@ -193,7 +195,7 @@
     }
     
     .games h2 {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
     
     .games h2.pixelated-title {
@@ -204,17 +206,17 @@
 
 @media (max-width: 768px) {
     .games h2 {
-        font-size: 3rem;
-        margin-bottom: 60px;
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
     
     .games h2.pixelated-title {
-        font-size: 1.125rem;
+        font-size: 1.5rem;
         line-height: 1.6;
     }
     
     .game {
-        padding: 60px 0;
+        padding: 30px 20px;
     }
 
     .game-details h3 {
@@ -228,26 +230,36 @@
 
     .game-details p {
         font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .game-links {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 40px;
+        justify-content: center;
     }
 
     .game-link {
-        margin-right: 20px;
-        font-size: 0.875rem;
+        margin-right: 0;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 }
 
 @media (max-width: 480px) {
     .games h2 {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
     }
     
     .games h2.pixelated-title {
-        font-size: 0.875rem;
+        font-size: 1.125rem;
         line-height: 1.6;
     }
 
     .game {
-        padding: 40px 0;
+        padding: 20px 20px;
     }
 
     .game-details h3 {
@@ -266,5 +278,15 @@
 
     .game .tags span::after {
         margin-left: 10px;
+    }
+
+    .game-links {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .game-link {
+        font-size: 0.7rem;
+        padding-bottom: 1px;
     }
 }

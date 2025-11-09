@@ -191,7 +191,10 @@ musicToggle.addEventListener('click', () => {
     }
 });
 
-// try to start music on first user interaction
+// try to autoplay music immediately on page load
+initMusic();
+
+// also try to start music on first user interaction as fallback
 document.addEventListener('click', initMusic, { once: true });
 document.addEventListener('keydown', initMusic, { once: true });
 document.addEventListener('touchstart', initMusic, { once: true });
