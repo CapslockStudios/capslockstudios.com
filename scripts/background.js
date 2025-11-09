@@ -152,7 +152,7 @@ bgMusic.loop = true;
 
 // try to play music when user first interacts with the page
 function initMusic() {
-    bgMusic.volume = 0.3; // set volume to 30%
+    bgMusic.volume = 1.0; // set volume to 100%
     bgMusic.play().then(() => {
         isPlaying = true;
         musicToggle.querySelector('i').classList.remove('fa-volume-mute');
