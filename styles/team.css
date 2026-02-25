@@ -176,18 +176,8 @@
         #10b981 100%);
 }
 
-/* jimmy - indigo & violet */
-.team-member:nth-child(7):hover::after {
-    background: linear-gradient(45deg, 
-        #6366f1 0%, 
-        #8b5cf6 25%, 
-        #a855f7 50%, 
-        #8b5cf6 75%, 
-        #6366f1 100%);
-}
-
 /* dylan - cyan & sky */
-.team-member:nth-child(8):hover::after {
+.team-member:nth-child(7):hover::after {
     background: linear-gradient(45deg, 
         #06b6d4 0%, 
         #0ea5e9 25%, 
